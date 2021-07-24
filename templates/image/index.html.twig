@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<title>Hello ImageController!</title>
+
+{% block body %}
+<h1>image</h1>
+{% for image in images %}
+<img src="data:image/png;base64,{{ image.image}}">
+
+{% endfor %} 
+
+{% endblock %}

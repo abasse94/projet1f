@@ -1,0 +1,76 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Affichage!{% endblock %}
+
+{% block body %}
+
+
+ <div class="row">
+            <div class="col-lg-4">
+ <table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Pour l anneé</th>
+      <td>{{demandeur.annee}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Numero de registre</th>
+      <td>{{demandeur.numeroRegistre}}</td>
+    </tr>
+      <tr>
+      <th scope="row">Annee naissance</th>
+      <td>{{demandeur.numeroRegistre}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Sexe</th>
+      <td>{{demandeur.sexe}}</td>
+    </tr>
+   <tr>
+      <th scope="row">Nom</th>
+      <td>{{demandeur.nom}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Prenom</th>
+      <td>{{demandeur.prenom}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Nom Pere</th>
+      <td>{{demandeur.nomPere}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Prenom Pere</th>
+      <td>{{demandeur.prenomPere}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Nom Mere</th>
+      <td>{{demandeur.nomMere}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Prenom Mere</th>
+      <td>{{demandeur.prenomMere}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Telephone</th>
+      <td>{{demandeur.tel}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Annee naissance</th>
+      <td>{{demandeur.createdAt | date("m/d/Y")}}</td>
+    </tr>
+   
+ 
+</table>
+</div>
+</div>
+
+
+{# <a class="nav-link active" href="{{ path('app_demande', {id: demandeur.id} )}}" class="btn btn-sm bnt-outline-secondary">edit</a>
+<a class="nav-link active" href="{{ path('demande_delete', {id: demandeur.id })}}" class="btn btn-sm bnt-outline-secondary" outline="return confirm('etes-vous sure')">supprimer</a> #}
+
+<a href="{{ path('app_show', {id: demandeur.id} )}}" button type="button" class="btn btn-secondary"><i class="fas fa-eye"></i></button></a>
+<a href="{{ path('demande_delete', {id: demandeur.id })}}" button type="button" class="btn btn-secondary"><i class="fas fa-trash"></i></button></a>
+<a href="{{ path('app_demande', {id: demandeur.id} )}}" button type="button" class="btn btn-secondary"><i class="fas fa-user-edit"></i></button></a>
+{# <a  href="{{ path('app_show', {id: demandeur.id} )}}" class="btn btn-sm bnt-outline-secondary">afficher</a> #}
+
+
+{% endblock %}

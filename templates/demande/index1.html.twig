@@ -1,0 +1,47 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Remplissez les champs{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+
+
+
+
+<div class="container gris">
+    <div class="container">
+    <center> <h1>Remplisser les Champs</h1> </center>
+        <div class="row">
+            <div class="col-lg-4">
+
+
+{{ form_start(form) }}
+
+<div class="form-group">
+    {{ form_row(form.nom)}}
+</div>
+<div class="form-group">
+    {{ form_row(form.prenom)}}
+</div>
+<div class="form-group">
+    {{ form_row(form.adresse)}}
+</div>
+<div class="form-group">
+    {{ form_row(form.cin)}}
+</div>
+<div class="form-group">
+    {{ form_row(form.tel)}}
+</div>
+        
+
+</div>
+              
+         </div>       
+    </div> <br>
+<center><button class="btn btn-success"> Valider </button></center>
+
+
+{{ form_end(form) }}
+</div>
+
+{% endblock %}

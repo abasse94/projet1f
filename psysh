@@ -1,0 +1,10 @@
+use App\Entity\Users;
+$em = $container->get('doctrine')->getManager()
+u = new User;
+$u->getName('bassirou')
+$u->setName('bassirou')
+$u->setEmail('cissebassirou@gmail.com')
+$u->setPassword('secret')
+dump($u)
+$em->persist($u)
+$em->flush

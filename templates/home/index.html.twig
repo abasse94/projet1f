@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+
+
+
+
+
+
+<div class="jumbotron">
+
+     <h1 class="display-3">BIENVENU</h1>
+     <div class="content"
+     <p class="lead"> This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+     <hr class="my-4">
+     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  
+  <div class="container mt-5">
+<a class="btn btn-primary" href="{{ path('app_demande') }}">Extrait de Naissance </a>
+<a class="btn btn-primary" href="{{ path('app_certificat') }}">certificat de Residence</a>
+{# <button type="button" class="btn btn-secondary" href="{{ path('app_certificat') }}">certificat de Residence</button> #}
+<button type="button" class="btn btn-success">certificat de celibat</button> 
+<button type="button" class="btn btn-info"><i class="fas fa-comments-alt"></i></button>
+
+  {# <a class="btn btn-primary" href="{{ path('app_show', {id: Demandeur.id}) }}">afficher</a> #}
+   {# <a href="{{ path('app_show', {id: demandeur.id} )}}" class="btn btn-sm bnt-outline-secondary">afficher</a>  #}
+ <a href="{{ path('app_shows')}}" class="btn btn-sm bnt-outline-secondary"><i class="fas fa-arrow-alt-circle-left"></i></a>
+</div>
+</div>
+
+
+
+
+{% endblock %}

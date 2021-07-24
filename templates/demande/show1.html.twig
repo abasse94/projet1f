@@ -1,0 +1,46 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Affichage!{% endblock %}
+
+{% block body %}
+
+
+ <div class="row">
+            <div class="col-lg-4">
+ <table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <td>{{certificat.nom}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Prenom</th>
+      <td>{{certificat.prenom}}</td>
+    </tr>
+      <tr>
+      <th scope="row">Adresse</th>
+      <td>{{certificat.adresse}}</td>
+    </tr>
+    <tr>
+      <th scope="row">CIN</th>
+      <td>{{certificat.cin}}</td>
+    </tr>
+   <tr>
+      <th scope="row">telephone</th>
+      <td>{{certificat.tel}}</td>
+    </tr>
+    
+   
+ 
+</table>
+</div>
+</div>
+
+
+{# <a href="{{ path('app_show', {id: certificat.id} )}}" button type="button" class="btn btn-secondary">afficher</button></a> #}
+<a href="{{ path('certificat_delete', {id: certificat.id })}}" button type="button" class="btn btn-secondary">Supprimer</button></a>
+<a href="{{ path('app_certificat', {id: certificat.id} )}}" button type="button" class="btn btn-secondary">Editer</button></a> 
+
+
+
+{% endblock %}

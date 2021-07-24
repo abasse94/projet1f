@@ -1,0 +1,11 @@
+{# <nav>
+    <ul>
+        <li><a href="{{ path('app_home')}}">hom</a></li>
+        {% if app.user %}
+       <li><a href="{{ path('app_logout')}}">log in</a></li>
+       {% else %}
+       <li><a href="{{ path('app_login')}}">logout</a></li>
+       <li><a href="{{ path('app_registre')}}">Registre</a></li>
+       {% endif %}   
+    </ul>
+</nav> #}

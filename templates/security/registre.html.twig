@@ -1,0 +1,13 @@
+ {% extends 'layouts/base.html.twig' %}
+
+{% block title 'Register'%}
+
+{% block body %}
+<h1>Register</h1>
+
+{{ form_start(restrationForm) }}
+{{ form_widget(restrationForm) }}
+
+<input type="submit" value="register" >
+{{ form_end(restrationForm) }}
+{% endblock %}
